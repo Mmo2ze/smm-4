@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/public/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/freamwork.css" />
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" /> -->
+    <link rel="icon" href="/public/imges/hosting-basic.png">
+</head>
+<body>
+<div class="page d-flex">   
+
+
+
+
+
+
+
+
+
+
+
+<di class="sidebar p-20">
+
+
+
+<div class="logo-page between-flex p-relative">
+    <img  src="/public/imges/hosting-basic.png" alt="">
+    <h2 class="c-blue">zigzag</h2>    
+</div >
+<p class="info-nameprice">welcome: <%=userData.user_name%> </p> 
+<p class="info-nameprice"> balance: <%=userData.user_balance%> $  </p>
+  
+<ul> 
+
+<li>
+    <a class="active d-flex align-center fs-14  rad-6 p-10" href="">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+</li>
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="orders">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+</li>
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+</li>   
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+</li>  
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="setting">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+</li>
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="support">
+              <i class=" fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+</li>  
+
+
+  
+  
+</ul>
+
+</di>
+
+
+<div class="content w-full">
+
+<div class="mobile-nav">  
+<span class="toggle"> 
+    <i class="fa-solid fa-bars fa-2x"></i>
+    
+</span>
+<nav class="nav-switch">
+    <span class="close"><i class="fa-sharp fa-solid fa-xmark "></i></span>
+   <ul> 
+
+<li>
+    <a class="active d-flex align-center fs-14  rad-6 p-10" href="">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+</li>
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="orders">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+</li>
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+</li>   
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+</li>  
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="setting">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+</li>
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="support">
+              <i class=" fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+</li>  
+
+
+  
+  
+</ul>
+
+</nav>
+</div>
+
+
+
+
+<h1>New Order</h1>
+<h2 class="txt-c mb-30 c-white">Chose Platform </h2>
+<div class="new-order d-grid gap-20 m-20"> 
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-blue c-black rad-6">Facebook</h2>
+    <i class="fab fa-facebook-f fa-8x"></i>
+    <a  href="order/facebook" class="d-block btn-shape f-bold bg-blue">Go ge Facebook Page</a>
+</div>
+
+<div class="box bg-card p-20 rad-6 txt-c p-relative instagram">
+    <h2 class="rad-6">Instagram</h2>
+    <i class="fa-brands fa-instagram fa-8x c-instagram-main p-relative"></i>
+    <a  href="order/instagram" class="d-block btn-shape f-bold">Go to Instagram Page</a>
+</div>
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-blue c-black rad-6 bg-youtube">youtube</h2>
+    <i class="fa-brands fa-youtube fa-8x c-youtube"></i>
+    <a  href="order/youtube" class="d-block btn-shape f-bold bg-youtube">Go to youtube Page</a>
+</div>
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-snapchat c-black rad-6">Snapchat</h2>
+    <i class="fa-brands fa-snapchat fa-8x c-snapchat"></i>
+    <a  href="order/snapchat" class="d-block btn-shape f-bold bg-snapchat">Go to Snapchat Page</a>
+</div>
+
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-blue c-black rad-6">Twitter</h2>
+    <i class="fa-brands fa-twitter fa-8x"></i>
+    <a  href="order/twitter" class="d-block btn-shape f-bold bg-blue">Go to Twitter Page</a>
+</div>
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class=" c-black rad-6 bg-white">Tiktok</h2>
+    <i class="fa-brands fa-tiktok fa-8x c-white"></i>
+    <a  href="order/tiktok" class="d-block btn-shape f-bold bg-white">Go to Tiktok Page</a>
+</div>
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-twitch c-black rad-6">Twitch</h2>
+    <i class="fa-brands fa-twitch fa-8x c-twitch"></i>
+    <a  href="order/twitch" class="d-block btn-shape f-bold bg-twitch">Go to Twitch Page</a>
+</div>
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-blue c-black rad-6">Linkedin</h2>
+    <i class="fa-brands fa-linkedin fa-8x"></i>
+    <a  href="order/linkedin" class="d-block btn-shape f-bold bg-blue">Go to Linkedin Page</a>
+</div>
+
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-spotify c-black rad-6">Spotify</h2>
+    <i class="fa-brands fa-spotify fa-8x c-spotify"></i>
+    <a  href="order/spotify" class="d-block btn-shape f-bold bg-spotify">Go to Spotify Page</a>
+</div>
+
+
+
+
+<div class="box bg-card p-20 rad-6 txt-c ">
+    <h2 class="bg-blue c-black rad-6">Telegram</h2>
+    <i class="fa-brands fa-telegram fa-8x"></i>
+    <a  href="order/telegram" class="d-block btn-shape f-bold bg-blue">Go to Telegram Page</a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+    <script src="public/js/olvs.js"></script>
+
+
+
+
+
+</body>
+</html>

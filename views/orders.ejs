@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order my Page</title>
+    <link rel="stylesheet" href="/public/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/freamwork.css" />
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" /> -->
+    <link rel="icon" href="/public/imges/hosting-basic.png" />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar p-20">
+        <div class="logo-page between-flex p-relative">
+          <img src="/public/imges/hosting-basic.png" alt="" />
+          <h2>zigzag</h2>
+        </div>
+      <p class="info-nameprice">  welcome <%=userData.user_name%></p> 
+        <p class="info-nameprice"> balance <%=userData.user_balance%>$</p>
+
+        <ul>
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="./">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="active d-flex align-center fs-14 rad-6 p-10"
+              href="orders"
+            >
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="setting">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="support">
+              <i class="fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+<div class="content w-fulls bg-black">
+<div class="mobile-nav">  
+<span class="toggle"> 
+    <i class="fa-solid fa-bars fa-2x"></i>
+    
+</span>
+<nav class="nav-switch">
+    <span class="close"><i class="fa-sharp fa-solid fa-xmark "></i></span>
+   <ul> 
+
+<li>
+    <a class="active d-flex align-center fs-14  rad-6 p-10" href="./">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+</li>
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="orders">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+</li>
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+</li>   
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+</li>  
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="setting">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+</li>
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="support">
+              <i class=" fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+</li>  
+
+
+  
+  
+</ul>
+
+</nav>
+</div>
+
+
+
+
+
+  <div class="body"> 
+<div class="table-container pl-10 pr-10">
+<h2 class="heading ">Orders</h2>
+<table class="table">
+<thead>
+<tr>
+<th>ID</th>
+<th>DATE</th>
+<th>Link</th>
+<th>CHARGE</th>
+<th>START COUNT</th>
+<th>QUANTITY</th>
+<th>SERVICES</th>
+<th>REMAIN</th>
+<th>STATUS</th>
+</tr>
+</thead>
+
+
+<tbody>
+  <% orders.map((item)=> { %>
+<tr>
+ <td data-label="ID"><%=item.id%> </td> 
+  <td data-label="DATE"><%=item.time%></td>
+ <td data-label="Link"><%= item.link%></td>
+ <td data-label="CHARGE"> <%= item.cost%></td>
+ <td data-label="START COUNT"><%= item.start_count%></td>
+ <td data-label="QUANTITY"><%= item.quantity%></td>
+ <td data-label="SERVICES"><%= item.name%></td>
+ <td data-label="REMAIN"><%= item.remains%></td>
+ <td class="vol" data-label="STATUS"><span class=<%= item.status %>> <%= item.status %></span> </td>
+</tr>
+<%})%>
+
+
+
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+    <script src="/public/js/olvs.js"></script>
+
+  </body>
+</html>

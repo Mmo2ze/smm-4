@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serves </title>
+    <link rel="stylesheet" href="/public/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/freamwork.css" />
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/public/imges/hosting-basic.png">
+</head>
+
+<body>
+    <div class="page d-flex">
+        <div class="sidebar p-20">
+
+
+            <div class="logo-page between-flex p-relative">
+                <img src="/public/imges/hosting-basic.png" alt="">
+                <h2>zigzag</h2>
+            </div>
+              <p class="info-nameprice">  welcome <%=userData.user_name%></p> 
+        <p class="info-nameprice"> balance <%=userData.user_balance%>$</p>
+
+
+                    <ul>
+
+                        <li>
+                            <a class=" active d-flex align-center fs-14  rad-6 p-10" href="/">
+                                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                <span>New Order</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" d-flex align-center fs-14  rad-6 p-10" href="/orders">
+                                <i class="fa-regular fa-user fa-fw"></i>
+                                <span>orders</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="d-flex align-center fs-14  rad-6 p-10" href="/addfunds">
+                                <i class="fa-regular fa-credit-card fa-fw"></i>
+                                <span>Add funds</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="d-flex align-center fs-14  rad-6 p-10" href="/">
+                                <i class="fa-regular fa-circle-user fa-fw"></i>
+                                <span>Loading</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class=" d-flex align-center fs-14  rad-6 p-10" href="/setting">
+                                <i class="fa-solid fa-gear fa-fw"></i>
+                                <span>Setting</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class=" d-flex align-center fs-14  rad-6 p-10" href="/support">
+                                <i class=" fa-solid fa-headset support"></i>
+                                <span>Support</span>
+                            </a>
+                        </li>
+
+
+        </div>
+
+
+        <div class="content  w-full">
+            <h1>Server</h1>
+            <div class="olvs-box-service d-grid p-20">
+
+
+
+
+
+
+
+
+                <form id="app-cover" action="/order/<%=platform%>/<%=kind%>" method="post">
+
+
+                    <div class="select mt-20">
+
+
+
+                        <div class= "lala"><%=msg%></div>
+
+                            <% if( services.length !=0){ %>
+                                <select name="id" id="option" class="bg-<%=platform%>">
+                                    <% services.map((item)=> { %>
+                                        <option value=<%=item.id%> > <%= item.name%> - <%=item.price%>$
+                                        </option>
+
+                                        <% }) %>
+                    </div>
+
+
+                    </select>
+
+                                    
+            </div>
+
+            <label class="c-<%=platform%>">link </label>
+            <input class="pg3 d-block mt-20  mb-20 w-full p-10 rad-6 bg-<%=platform%>" type="text" placeholder="Enter The Link"
+                id="link" name="link" autocomplete="off" required>
+            <label class="c-<%=platform%>">quantity</label>
+                    <div class="p-relative"> 
+            <input class="pg3 d-block mt-20  mb-40 w-full p-10 rad-6 bg-<%=platform%> " type="number"
+                placeholder="Enter The Quantity" id="quantity" name="quantity" autocomplete="off" required>
+
+
+
+            <div class="oov"> 
+            <p class="min-max c-<%=platform%>" id="min">min:<%=services[0].min%></p>
+            <p class="min-max c-<%=platform%>" id="max">max:<%=services[0].max%></p>
+            </div>  
+</div>
+
+
+            <label id="test1 " class="c-<%=platform%>">charge</label>
+            <input class="pg3 d-block mt-20  mb-10 w-full p-10 rad-6 bg-<%=platform%> " type="text"
+                placeholder="<%=services[0].price%>" id="charge" autocomplete="off">
+
+
+
+            <button class="button-services bg-<%=platform%>" type="submit">
+                submit
+            </button>
+
+            </form>
+        </div>
+
+        <%}else {%>
+            <h2>coming soon</h2>
+            <%}%>
+
+    </div>
+
+
+
+    </div>
+
+
+    </div>
+
+    <script>
+
+        let services = '<%- JSON.stringify(services) %>';
+        services = JSON.parse(services)
+
+        const service = document.getElementById('option');
+        const input = document.getElementById('quantity');
+        const log = document.getElementById('values');
+        let charge = document.getElementById('charge');
+        let max = document.getElementById('max');
+        let min = document.getElementById('min');
+         i = 0;
+
+            service.addEventListener('change', (e) => {
+                place = document.getElementById('charge')
+                for (i = 0; i < services.length; i++) {
+                    if (services[i].id == service.value) {
+                        place.placeholder = services[i].price
+                        break;
+                    }
+                }
+
+                min.textContent = 'min:' + services[i].min;
+                max.textContent = 'max:' + services[i].max;
+            })
+            input.addEventListener('input', updateValue);
+            function updateValue(e) {
+                charge.placeholder = (e.target.value * services[i].price / 1000).toFixed(5);
+        }
+           
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="dribbble">
+            <input class="s-c bottom" type="radio" name="platform" value="dribbble">
+            <i class="fab fa-instagram "></i>
+            <span class="label">instagram</span>
+            <span class="opt-val">instagram</span>
+          </div>
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="behance">
+            <input class="s-c bottom" type="radio" name="platform" value="behance">
+            <i class="fa-brands fa-youtube  "></i>
+            <span class="label">youtube</span>
+            <span class="opt-val">youtube</span>
+          </div>
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="hackerrank">
+            <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+            <i class="fa-brands fa-snapchat"></i>
+            <span class="label">snapchat</span>
+            <span class="opt-val">snapchat</span>
+          </div>
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="stackoverflow">
+            <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
+            <i class="fa-brands fa-twitter"></i>
+            <span class="label">twitter</span>
+            <span class="opt-val">twitter</span>
+          </div>
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+            <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+            <i class="fa-brands fa-tiktok"></i>
+            <span class="label">tiktok</span>
+            <span class="opt-val">tiktok</span>
+          </div>
+              <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="twitch">
+            <input class="s-c bottom" type="radio" name="platform" value="twitch">
+            <i class="fa-brands fa-twitch "></i>
+            <span class="label">twitch</span>
+            <span class="opt-val">twitch</span>
+          </div>
+        <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="linkedin">
+            <input class="s-c bottom" type="radio" name="platform" value="linkedin">
+            <i class="fa-brands fa-linkedin  "></i>
+            <span class="label">linkedin</span>
+            <span class="opt-val">linkedin</span>
+          </div>
+          <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="spotify">
+            <input class="s-c bottom" type="radio" name="platform" value="spotify">
+            <i class="fa-brands fa-spotify"></i>
+            <span class="label">spotify</span>
+            <span class="opt-val">spotify</span>
+          </div>
+             <div class="option">
+            <input class="s-c top" type="radio" name="platform" value="telegram">
+            <input class="s-c bottom" type="radio" name="platform" value="telegram">
+            <i class="fa-brands fa-telegram "></i>
+            <span class="label">telegram</span>
+            <span class="opt-val">telegram</span>
+          </div> -->

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+   <link rel="stylesheet" href="/public/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/freamwork.css" />
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/public/imges/hosting-basic.png">
+</head>
+<body>
+<div class="page d-flex ">   
+
+<div class="sidebar p-20 support">
+
+
+<div class="logo-page between-flex p-relative">
+    <img src="/public/imges/hosting-basic.png" alt="">
+    <h2 >zigzag</h2>    
+</div>
+
+  <p class="info-nameprice">  welcome <%=userData.user_name%></p> 
+        <p class="info-nameprice"> balance <%=userData.user_balance%>$</p>
+
+        <ul>
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="/">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="orders">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="d-flex align-center fs-14 rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class=" d-flex align-center fs-14 rad-6 p-10"
+              href="setting"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="active d-flex align-center fs-14 rad-6 p-10" href="support">
+              <i class="fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+          </li>
+        </ul>
+
+
+</div>
+
+
+<div class="content w-full supp">
+
+<div class="mobile-nav">  
+<span class="toggle support"> 
+    <i class="fa-solid fa-bars fa-2x"></i>
+    
+</span>
+<nav class="nav-switch">
+    <span class="close"><i class="fa-sharp fa-solid fa-xmark "></i></span>
+   <ul> 
+
+<li>
+    <a class="active d-flex align-center fs-14  rad-6 p-10" href="./">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>New Order</span>
+            </a>
+</li>
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="orders">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>orders</span>
+            </a>
+</li>
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="addfunds">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Add funds</span>
+            </a>
+</li>   
+
+<li>
+    <a class="d-flex align-center fs-14  rad-6 p-10" href="#">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Loading</span>
+            </a>
+</li>  
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="setting">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Setting</span>
+            </a>
+</li>
+
+<li>
+    <a class=" d-flex align-center fs-14  rad-6 p-10" href="support">
+              <i class=" fa-solid fa-headset support"></i>
+              <span>Support</span>
+            </a>
+</li>  
+
+
+  
+  
+</ul>
+
+</nav>
+</div>
+
+
+
+<h1 class="c-support">Support</h1>
+
+
+<div class="cont m-20"> 
+<h2 class="contact">Contact Us</h2>
+</div>
+<div class="m-20">
+<div class="val-cont c-support">
+    <p class="p-10 c-green">Phone :&nbsp;&nbsp;&nbsp;<span>+963954616878</span></p>
+    <p class="p-10 c-green">WhatsApp :&nbsp;&nbsp;&nbsp;<span>+963954616878</span></p>
+    <p class="p-10 c-green">Email :&nbsp;&nbsp;&nbsp;<span>@gmail.com</span></p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+    <script src="/public/js/olvs.js"></script>
+
+</body>
+</html>

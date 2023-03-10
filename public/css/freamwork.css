@@ -1,0 +1,279 @@
+:root {
+  --box-shadow: #2196f3;
+  --color-card: #131212;
+  --blue-color: #2196f3;
+  --blue-alt-color: #1787e0;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #ff1100;
+  --grey-color: #888;
+  --color-wave:#4973ff;
+  --color-instagram-main:  #800080;
+  --color-instagram:#833AB4;
+  --color-twitch:#6441A4;
+  --color-support:#1DB954;
+  --color-spotify:#1DB954;
+  --color-snapchat:#FFFC00;
+  --transition: 0.5s;
+}
+
+
+/* Start display  */
+
+.d-grid{
+    display: grid;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.between-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.d-block{
+    display: block;
+}
+.gap-20{
+    gap: 20px;
+}
+/* End display  */
+
+/* Start Font  */
+.fs-14{
+    font-size: 14px;
+}
+.fs-25{
+    font-size: 25px;
+}
+.f-bold{
+    font-weight: bold;
+}
+
+
+.txt-c{
+text-align: center;
+}
+
+/* End Font  */
+
+
+/* Start Color  */
+.c-black{
+    color: black;
+}
+.c-white{
+    color: white;
+}
+.c-facebook{
+    color: var(--blue-color);
+}
+.c-twitter{
+    color: var(--blue-color);
+
+}
+.c-telegram{
+    color: var(--blue-color);
+
+}
+.c-blue{
+    color: var(--blue-color);
+}
+.c-linkedin{
+    color: var(--blue-color);
+
+}
+.c-gray{
+    color: var(--grey-color);
+}
+.c-youtube{
+    color: red;
+}
+
+.c-instagram{
+    color: var(--color-instagram);
+}
+.c-instagram-main{
+    color: var(--color-instagram-main);
+}
+
+
+.c-twitch{
+    color: var(--color-twitch);
+}
+.c-spotify{
+    color: var(--color-spotify);
+}
+.c-support{
+    color: var(--color-support);
+}
+.c-snapchat{
+    color: var(--color-snapchat);
+}
+.bg-black{
+    background-color: black;
+}
+.bg-card{
+    background-color: var(--color-card);
+}
+.bg-blue{
+    background-color: var(--blue-color);
+}
+.bg-youtube{
+    background-color: var(--red-color);
+}
+.bg-instagram{
+    background-color: var(--color-instagram);
+}
+.bg-white{
+    background-color: white;
+}
+.bg-twitch{
+    background-color: var(--color-twitch);
+}
+.bg-spotify{
+    background-color: var(--color-spotify);
+}
+.bg-snapchat{
+    background-color: var(--color-snapchat);
+}
+.bg-red{
+    background-color: red;
+}
+.bg-youtube{
+    background-color: red;
+}
+.bg-facebook{
+    background-color: var(--blue-color);
+}
+.bg-twitter{
+    background-color: var(--blue-color);
+
+}
+.bg-telegram{
+    background-color: var(--blue-color);
+
+}
+.bg-linkedin{
+    background-color: var(--blue-color);
+
+}
+/* End Color  */
+
+
+/* Start border  */
+.b-bottom{
+    border-bottom: 1px solid var(--blue-color);
+}
+.b-bottom-w{
+    border-bottom: 1px solid white;
+}
+.b-bottom-youtube{
+    border-bottom: 1px solid red;
+}
+.b-bottom-snapchat{
+    border-bottom: 1px solid var(--color-snapchat);
+}
+.b-bottom-instagram{
+    border-bottom: 1px solid var(--color-instagram);
+}
+.b-bottom-twitch{
+    border-bottom: 1px solid var(--color-twitch);
+}
+.b-bottom-spotify{
+    border-bottom: 1px solid var(--color-spotify);
+}
+.rad-6{
+    border-radius: 6px;
+}
+.rad-half{
+    border-radius: 50%;
+}
+.border{
+    border: 1px solid var(--blue-color);
+}
+
+/* End border  */
+/* Start Width And Height  */
+.w-full{
+    width: 100%;
+}
+.w-fulls{
+    width: 110%;
+}
+.h-full{
+    height: 100%;
+}
+.w-90{
+    width: 90%;
+}
+
+/* End Width And Height  */
+
+
+/* Start Padding And Margin */
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 20px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pl-10{
+    padding-left: 10px;
+}
+
+.m-20{
+    margin: 20px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+/* End Padding And Margin  */
+
+
+/* Start Position */
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+
+
+
+/* End Position */
+
+
+
+
+
